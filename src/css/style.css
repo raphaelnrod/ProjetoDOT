@@ -8,7 +8,7 @@
 html,
 body {
   height: 100%;
-  background-color: #929292;
+  background-color: #545454;
 }
 
 .container {
@@ -22,40 +22,41 @@ body {
 }
 
 /* HEADER DO SITE COMEÇA AQUI */
-header {
-  padding: 20px 2%;
-}
 
-.main-image {
-  display: flex;
-  justify-content: center;
+img.responsive{
   width: 100%;
-  height: 800px;
-  background-image: url("../img/main.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 30px 0;
+  height: auto;
 }
 
-.main-image h1 {
+.title{
+  display: inline-block;
+  position: relative;
+}
+
+.title .texto{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 15px 0;
+}
+
+.title h1 {
   text-align: center;
   width: 100%;
   color: #5c7621;
 }
 
-.main-image p {
+.title p {
   text-align: center;
   font-weight: bold;
   color: #323f12;
   font-size: 13px;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 /* PRIMEIRA SECTION */
 section.section-one {
   width: 100%;
-  height: 400px;
-  background: #545454;
 }
 
 .section-one .article-wrapper {
@@ -71,7 +72,7 @@ section.section-one {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 70px;
+  padding: 3% 1%;
 }
 
 .article .image {
@@ -84,7 +85,7 @@ section.section-one {
 }
 
 .article h1 {
-  padding: 15px 0;
+  padding: 16px 0;
   font-size: 20px;
 }
 
@@ -96,7 +97,8 @@ section.section-one {
 section.section-two {
   width: 100%;
   height: 400px;
-  padding: 30px;
+  padding: 32px;
+  background: #929292;
 }
 
 .section-two .section-wrapper {
@@ -119,7 +121,7 @@ section.section-two {
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  border: 15px solid rgb(30, 30, 30);
+  border: 12px solid rgb(30, 30, 30);
 }
 
 .section-two .text-wrap {
@@ -139,12 +141,12 @@ section.section-two {
 
 .text h1 {
   font-size: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 /* FOOTER */
 footer {
-  padding: 20px 2%;
+  padding: 18px 2%;
   background-color: #545454;
   text-align: center;
   font-weight: bold;
@@ -152,22 +154,153 @@ footer {
 }
 
 /* MEDIA QUERY RESPONSIVE PROPERTIES */
-@media screen and (max-width: 768px) {
-  
-}
 
-@media screen and (max-width: 580px) {
-  section.profile-container .img-profile {
-    width: 70%;
-    padding-top: 90%;
+@media screen and (max-width: 880px){
+
+  html,
+  body {
+    background-color: #545454;
   }
 
-  section.videos .box-video {
-    width: 90%;
-    padding-top: calc(100% * 0.6);
+  img.responsive{
+    margin-top: 80px;
   }
 
-  section.contact .w50 {
+  .title .texto{
+    padding: 8px 0;
+  }
+
+  .texto h1{
+    font-size: 20px;
+  }
+
+  .texto h1, .texto p{
+    color: white;
+  }
+
+  section.section-one{
+    height: auto;
+    background: #525252;
+    padding: 2% 6%;
+  }
+
+  .section-one .article-wrapper {
+    flex-direction: column;
+  }
+
+  .section-one .article:first-of-type{
+    padding-top: 20px !important;
+  }
+
+  section.section-two{
+    background-color: #929292;
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .section-two .section-wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section-two .img-wrap{
     width: 100%;
+    height: auto;
+  }
+
+  .section-two .rounded-image{
+    width: 60%;
+  }
+
+  .section-two .text-wrap{
+    width: 100%;
+    height: auto;
+    padding: 16px 8px;
+    text-align: center;
   }
 }
+
+/* MOBILE LARGE */
+@media screen and (max-width: 426px) {
+
+  .container {
+    max-width: 425px !important;
+  }
+
+  .texto h1{
+    font-size: 17px;
+  }
+
+  .texto p{
+    font-size: 11px;
+  }
+
+  .main-image {
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    background-color: #525252;
+  }
+
+  .main-image .title{
+    height: fit-content;
+  }
+
+  .main-image h1 {
+    padding-top: 4px;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .main-image p {
+    font-size: 11px;
+    padding: 8px 0;
+    color: white;
+  }
+
+  .section-two .rounded-image{
+    width: 85%;
+  }
+}
+
+/* MOBILE MEDIUM */
+@media screen and (max-width: 376px) {
+  
+  section.section-two{
+    padding-top: 16px;
+  }
+
+  .section-two .img-wrap{
+    width: 100%;
+    height: auto;
+  }
+
+  .section-two .rounded-image{
+    width: 90%;
+    background-size: cover;
+    height: 220px;
+  }
+
+  .section-two .text-wrap{
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+  .article{
+    padding: 20px;
+  }
+
+  /* .section-two .rounded-image a{
+    width: 60%;
+    height: 300px;
+    background-image: url("../img/main.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 12px solid rgb(30, 30, 30);
+  } */
+}
+

@@ -14,8 +14,10 @@
     "gulp-imagemin": "^7.1.0"
   },
   "dependencies": {
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
+    "gulp-html-replace": "^1.6.2",
     "gulp-nw-builder": "^1.4.0",
     "gulp-zip": "^5.0.2",
     "run-sequence": "^2.2.1"
